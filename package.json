@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "bin": {
     "node-rps": "./bin/rps-cli.js",
-    "node-rpsls": "rpsls-cli.js"
+    "node-rpsls": "./bin/rpsls-cli.js"
   },
   "description": "This assignment will help you learn to create an installable Node.js module package. You'll also provide a command line interface with it.",
   "main": "./lib/rpsls.js",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/comp426-2023-spring/a03-kavyachel.git"
   },
-  "author": "",
+  "author": "kavyachel",
   "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/comp426-2023-spring/a03-kavyachel/issues"
