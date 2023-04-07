@@ -4,7 +4,7 @@
 import minimist from 'minimist';
 import { rpsls } from "../lib/rpsls.js";
 
-const argv = minimist(process.argv.slice(2));
+var argv = minimist(process.argv.slice(2));
 
 if (argv.h || argv.help) {
   console.log(`Usage: node-rpsls [SHOT]
