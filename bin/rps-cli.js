@@ -4,7 +4,7 @@
 import minimist from 'minimist';
 import { rps } from "../lib/rpsls.js";
 
-var args = minimist(process.argv.slice(2));
+var argv = minimist(process.argv.slice(2));
 
 //Help command
 if (argv.h || argv.help) {
@@ -34,7 +34,7 @@ if (argv.r || argv.rules) {
 
 
 try {
-    let result = rps(args._[0]);
+    let result = rps(argv._[0]);
     console.log(JSON.stringify(result));
   } catch (error) {
     console.log(`Usage: node-rps [SHOT]
