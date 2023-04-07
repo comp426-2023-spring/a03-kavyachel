@@ -22,7 +22,8 @@ if (argv.h || argv.help) {
 }
 
 if (argv.r || argv.rules) {
-  console.log(`Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+  console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
+
   - Scissors CUTS Paper
   - Paper COVERS Rock
   - Rock SMOOSHES Lizard
@@ -40,6 +41,7 @@ try {
     let result = rpsls(argv._[0]);
     console.log(JSON.stringify(result));
   } catch (error) {
+    if (error instanceof RangeError) {
     console.log(`Usage: node-rpsls [SHOT]
     Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
     
@@ -52,6 +54,7 @@ try {
       node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
                         e.g {"player":"rock","opponent":"Spock","result":"lose"}`);
     console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
+
     - Scissors CUTS Paper
     - Paper COVERS Rock
     - Rock SMOOSHES Lizard
@@ -63,4 +66,5 @@ try {
     - Spock VAPORIZES Rock
     - Rock CRUSHES Scissors`);
     process.exit(1); 
+    }
   }

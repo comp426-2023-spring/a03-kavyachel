@@ -37,6 +37,7 @@ try {
     let result = rps(argv._[0]);
     console.log(JSON.stringify(result));
   } catch (error) {
+    if (error instanceof RangeError) {
     console.log(`Usage: node-rps [SHOT]
     Play Rock Paper Scissors (RPS)
     
@@ -53,5 +54,6 @@ try {
     - Paper COVERS Rock
     - Rock CRUSHES Scissors`);
     process.exit(1);
+    }
   }
 
